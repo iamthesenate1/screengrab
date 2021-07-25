@@ -82,7 +82,8 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent),
         _ui->toolBar->addWidget(spacer);
 
 //    _ui->toolBar->addAction(actQuit);
-
+    addAction(actQuit);
+        
     void (QSpinBox::*delayChange)(int) = &QSpinBox::valueChanged;
     connect(_ui->delayBox, delayChange, this, &MainWindow::delayBoxChange);
     void (QComboBox::*typeScr)(int) = &QComboBox::currentIndexChanged;
