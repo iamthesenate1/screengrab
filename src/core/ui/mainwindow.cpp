@@ -367,7 +367,7 @@ void MainWindow::createTray()
     _trayMenu->addAction(actHelp);
     _trayMenu->addAction(actAbout);
     _trayMenu->addSeparator();
-    _trayMenu->addAction(actQuit);
+//    _trayMenu->addAction(actQuit);
 
     _trayIcon = new QSystemTrayIcon(this);
 
