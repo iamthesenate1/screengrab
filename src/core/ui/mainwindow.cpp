@@ -81,7 +81,7 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent),
     spacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         _ui->toolBar->addWidget(spacer);
 
-    _ui->toolBar->addAction(actQuit);
+//    _ui->toolBar->addAction(actQuit);
 
     void (QSpinBox::*delayChange)(int) = &QSpinBox::valueChanged;
     connect(_ui->delayBox, delayChange, this, &MainWindow::delayBoxChange);
@@ -367,7 +367,7 @@ void MainWindow::createTray()
     _trayMenu->addAction(actHelp);
     _trayMenu->addAction(actAbout);
     _trayMenu->addSeparator();
-//    _trayMenu->addAction(actQuit);
+    _trayMenu->addAction(actQuit);
 
     _trayIcon = new QSystemTrayIcon(this);
 
